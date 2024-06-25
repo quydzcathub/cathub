@@ -2977,29 +2977,6 @@ game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible then
             end
         end
     end)
-local Mob_Kill_Cake_Prince = Tabs.G:AddParagraph({
-    Title = "Check Katakuri Spam",
-    Content = ""
-})
-
-spawn(function()
-	while wait() do
-		pcall(function()
-			if string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 88 then
-				Mob_Kill_Cake_Prince:SetDesc("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41).."")
-			elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 87 then
-				Mob_Kill_Cake_Prince:SetDesc("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40).."")
-			elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
-				Mob_Kill_Cake_Prince:SetDesc("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39).." ")
-			else
-				Mob_Kill_Cake_Prince:SetDesc("Cake Prince : [YES]")
-		       end
-                    end
-                end
-            end)
-        end
-    end
-end)
 local AutoKatakuriToggle = Tabs.G:AddToggle("AutoKatakuriToggle", {Title = "Auto Katakuri", Default = false })
 
 AutoKatakuriToggle:OnChanged(function(Value)
