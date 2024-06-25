@@ -3130,21 +3130,6 @@ spawn(function()
         end
     end
 end)
-local StatusBone = Tabs.G:AddParagraph({
-    Title = "Bone Status",
-    Content = ""
-})
-	spawn(function()
-		pcall(function()
-			while wait() do
-				StatusBone:SetDesc("You Have : "..tostring(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Check").." Bones"))
-		       end
-                    end
-                end
-            end)
-        end
-    end
-end)
 local AutoBoneToggle = Tabs.G:AddToggle("AutoBoneToggle", {Title = "Auto Bone", Default = false })
 
 AutoBoneToggle:OnChanged(function(Value)
